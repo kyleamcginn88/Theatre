@@ -2,7 +2,7 @@ from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
 # Palmer said to change location to Location for better naming conventions
-from Theatre.models import Info, MovieInfo , Store, Location
+from Theatre.models import Info, MovieInfo , Store, Location, Performances
 
 
 def home(request):
@@ -31,4 +31,4 @@ def performances(request):
 	#('11/23/15', 'Dark Keys' ,'Alternative Rock'),
 	#('12/11/15', 'IceBox','Rap' ),
 	#('12/31/15', 'boyz II Gentlemen', 'R&B' )]
-	return render(request, 'performances.html', {'performances': list_performances})
+	return render(request, 'performances.html', {'performances': performances})
