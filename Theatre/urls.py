@@ -5,10 +5,10 @@ from views import home, store, location, movies, performances
 
 urlpatterns = patterns('',
     url(r'^$', home),
-	url(r'^movies$', 'Theatre_CS399.views.movies', name='movies'),
-	url(r'^performances$', 'Theatre_CS399.views.performances', name='performances'),
-	url(r'^store$', 'Theatre_CS399.views.store', name='store'),
-	url(r'^location$', 'Theatre_CS399.views.location', name='location'),
+	url(r'^movies$', 'Theatre.views.movies', name='movies'),
+	url(r'^performances$', 'Theatre.views.performances', name='performances'),
+	url(r'^store$', 'Theatre.views.store', name='store'),
+	url(r'^location$', 'Theatre.views.location', name='location'),
 	
     url(r'^admin/', include(admin.site.urls)),
 )
