@@ -31,4 +31,4 @@ def performances(request):
 	#('11/23/15', 'Dark Keys' ,'Alternative Rock'),
 	#('12/11/15', 'IceBox','Rap' ),
 	#('12/31/15', 'boyz II Gentlemen', 'R&B' )]
-	return render(request, 'performances.html', {'performances': performances})
+	return render(request, 'performances.html', {'performances': Performances.objects.all()})
