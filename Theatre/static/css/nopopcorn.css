@@ -1,8 +1,13 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #b0c4de;
 }
 
 .navbar {
   margin-bottom: 20px;
+}
+
+.navbar-right {
+  font-size: 19px;
 }
