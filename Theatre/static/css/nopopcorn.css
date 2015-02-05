@@ -11,3 +11,11 @@ body {
 .navbar-right {
   font-size: 19px;
 }
+
+.jumbotron {
+  background-color: #F8F8F8;
+}
+
+.breadcrumb {
+  background-color: #F8F8F8;
+}
