@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block nav-performances %}class="active"{% endblock %}
+{% block titleBlock %} Performance {% endblock %}
+{% block content %}
+<table style="width:50%" style="height:100%" border=1 frame=void rules=rows align="center">
+<h1 align="center"> Upcoming Performance</h1>
+    <tr>
+    	<th height="50">Dates</th>
+    	<th height="50">Artists</th>
+    	<th height="50">Genres</th>
+    </tr>
+    {% for date, artists, genres in list_performances %}
+    <tr>
+    	<th height="25">{{ date }}</th>
+    	<th height="25">{{ artists }}</th>
+    	<th height="25">{{ genres }}</th>
+    </tr>
+  {% endfor %}
+</table>
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block nav-movies %}class="active"{% endblock %}
+{% block titleBlock %} Movies{% endblock %}
+{% block content %}
+
+<h1> Top 15 Movies: </h1>
+
+<ol>
+  {% for item in movies %}
+   <li>{{ item.name }} --> {{ item.description }}</li>
+  {% endfor %}
+</ol>
+
+{% endblock %}
