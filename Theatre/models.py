@@ -22,8 +22,9 @@ class Store(models.Model):
     price = models.CharField(max_length = 40)
     thumbnail = models.CharField(max_length = 400)
 
-class location(models.Model):
+class Location(models.Model):
     item = models.CharField(max_length = 100)
     description = models.CharField(max_length = 300)
     price = models.CharField(max_length = 40)
     thumbnail = models.CharField(max_length = 400)
+	
