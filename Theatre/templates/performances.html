@@ -11,11 +11,11 @@
     	<th height="50">Artists</th>
     	<th height="50">Genres</th>
     </tr>
-    {% for date, artists, genres in performances %}
+    {% for item in performances %}
     <tr>
-    	<th height="25">{{ date }}</th>
-    	<th height="25">{{ artists }}</th>
-    	<th height="25">{{ genres }}</th>
+    	<th height="25">{{ item.date }}</th>
+    	<th height="25">{{ item.name }}</th>
+    	<th height="25">{{ item.genre }}</th>
     </tr>
   {% endfor %}
 </table>
