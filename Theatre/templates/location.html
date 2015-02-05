@@ -3,25 +3,45 @@
 {% block nav-location %}class="active"{% endblock %}
 {% block titleBlock %} Location{% endblock %}
 {% block content %}
-<style>
-      #map-canvas {
-        width: 500px;
-        height: 400px;
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map-canvas');
-        var mapOptions = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+<center>
+<script type="text/javascript"
+            src="http://maps.google.com/maps/api/js?sensor=false">
+        </script>
+        <script type="text/javascript">
+          function initialize() {
+            var position = new google.maps.LatLng(35.189218, -111.650507);
+            var myOptions = {
+              zoom: 15,
+              center: position,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(
+                document.getElementById("map_canvas"),
+                myOptions);
 
-    <div id="map-canvas"></div>
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title:"This is the place."
+            });
+
+            var contentString = 'No Popcorn! Movie Theater';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.open(map,marker);
+            });
+
+          }
+
+        </script>
+        </head>
+        <body onload="initialize()">
+          <div id="map_canvas" style="width:500px; height:500px"></div>
+        </body>
+
+</center>
+
 {% endblock %}
