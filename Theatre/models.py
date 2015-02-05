@@ -28,3 +28,7 @@ class Location(models.Model):
     price = models.CharField(max_length = 40)
     thumbnail = models.CharField(max_length = 400)
 	
+class Performances(models.Model):
+    date = models.DateField(['%Y-%m-%d'])
+    name = models.CharField(max_length = 254)
+    genre = models.CharField(max_length = 254)
