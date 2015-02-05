@@ -18,7 +18,7 @@ def movies(request):
     return render(request,'movies.html', {'movies': MovieInfo.objects.all()})
 
 def performances(request):
-	list_performances = [('1/15/15', 'Fish Pump', 'Techno' ),
+	list_performances = [('1/15/15', 'Fish Pump', 'Dance' ),
 	('2/25/15', '7pac' ,'Hip-Hop'),
 	('3/1/15', 'J-ci and Jolow','R&B' ),
 	('4/18/15', 'King of Lions', 'Alternative Rock'),
