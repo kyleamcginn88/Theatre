@@ -9,7 +9,7 @@ def home(request):
     return render(request, 'home.html', {'all_movies': Info.objects.all()})
 
 def store(request):
-    return render(request,'store.html', {'store_item': Store.objects.all()})
+    return render(request,'store.html', {'store': Store.objects.all()})
 
 def location(request):
     return render(request, 'location.html', {'store_item': Info.objects.all()})
