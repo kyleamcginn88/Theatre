@@ -10,12 +10,18 @@
     	<th height="50">Dates</th>
     	<th height="50">Artists</th>
     	<th height="50">Genres</th>
+    	<th height="50">Tickets</th>
     </tr>
     {% for item in performances %}
     <tr>
     	<th height="25">{{ item.date }}</th>
     	<th height="25">{{ item.name }}</th>
     	<th height="25">{{ item.genre }}</th>
+    	<th height="25">
+          <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+          </button>
+        </th>
     </tr>
   {% endfor %}
 </table>

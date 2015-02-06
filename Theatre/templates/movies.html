@@ -9,11 +9,17 @@
     <tr>
     	<th height="50">Name</th>
     	<th height="50">Synopsis</th>
+    	<th height="50">Tickets</th>
     </tr>
     {% for item in movies %}
     <tr>
     	<th height="25">{{ item.name }}</th>
     	<th height="25">{{ item.description }}</th>
+    	<th height="25">
+          <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+          </button>
+        </th>
     </tr>
   {% endfor %}
 </table>
