@@ -3,36 +3,33 @@
 {% block nav-store %}class="active"{% endblock %}
 {% block titleBlock %}Store{% endblock %}
 
-{% block page_style %}
-{#    Any CSS specific to this page will go inside of this block.   #}
-    .input {
-  width: 44px;
-    }
 
-{% endblock %}
+<body>
 
 {% block content %}
 
-{#    Any content associated with the page will go inside of this block.    #}
-    <table style="width:50%" style="height:100%" border=1 frame=void rules=rows align="center">
+    <table style="width:90%" style="height:100%" border=1 frame=void rules=rows align="center">
 
     <h1 align="center"> Shop Till You Drop</h1>
     <tr>
-    	<th height="50">item</th>
-    	<th height="50">description</th>
-    	<th height="50">price</th>
-        <th height="50">thumbnail</th>
+    	<th height="50">item</th><br>
+    	<th height="50">description</th><br>
+    	<th height="50">price</th><br>
+        <th height="50">thumbnail</th><br>
     </tr>
     {% for item in store %}
     <tr>
-    	<th height="25">{{ item.item }}</th>
-    	<th height="25">{{ item.description }}</th>
-    	<th height="25">{{ item.price }}</th>
-    	<th height="25">{{ item.thumbnail }}</th>
+    	&nbsp;<th height="25">{{ item.item }}</th>&nbsp;
+    	&nbsp;<th height="25">{{ item.description }}&nbsp;
+    	&nbsp;<th height="25">{{ item.price }}</th>&nbsp;
+    	&nbsp;<th height="25">{{ item.thumbnail }}</th> &nbsp;
     </tr>
   {% endfor %}
-    {% endblock %}
 
-{% block js %}
-{#    Insert any JavaScript here         #}
+
+
+
+
+</table>
+</body>
 {% endblock %}
